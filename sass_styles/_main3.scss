@@ -1,0 +1,265 @@
+.design_project {
+  background-color: #FFFFFF;
+  .container {   
+    padding-bottom: 320px;   
+    .design_title {
+      padding-top: 55px;
+      text-align : center;
+      font-family: 'YesevaOne-Regular';
+      font-size: 20px;
+      line-height: 28px;
+      text-transform: uppercase;
+      color: black;
+    }
+    .design_text {
+      width: 60%;
+      font-family: 'FuturaBookC';
+      font-size: 20px;
+      line-height: 27px;
+      text-align: center;
+      color: #363636;
+      margin: 0 auto;
+    }
+    .design_supply {
+      width: 100%;
+      @extend %flex_line;
+      .design_supply1 {
+        @extend %flex_column;
+        position: relative;
+        width: 33%;
+        img {
+          width: 100%;
+        }
+        .design_supply2 {
+          position: absolute;
+          left: 13%;
+          top: 60%;
+          width: 84%;
+          p {
+            font-family: 'YesevaOne-Regular';
+            font-size: 18px;
+            line-height: 25px;
+            color: $black; 
+            background-color: #FFFFFF;
+            margin-bottom: 0;
+            padding: 15px 0 0 26px;
+          }
+          ul {
+            padding: 0 0 30px 20px;
+            background-color: #FFFFFF;
+            font-family: FuturaBookC;
+            font-size: 15px;
+            line-height: 25px;
+            color: #959595;
+          }
+          .submit {
+            @extend %orange_button;
+            margin-top: -15px;
+            height: 54px;
+            width: 76%;
+          }
+        }
+      } 
+    }
+  }
+}
+
+.our_team {
+  background-color: $black;
+  .container {       
+    .ot_title {
+      padding-top: 20px;
+      text-align : center;
+      font-family: 'YesevaOne-Regular';
+      font-size: 20px;
+      line-height: 28px;
+      text-transform: uppercase;
+      color: white;
+    }
+    .ot_text {
+      width: 35%;
+      font-family: 'FuturaBookC';
+      font-size: 20px;
+      line-height: 27px;
+      text-align: center;
+      color: white;
+      margin: 0 auto 60px;
+    }
+    .ot_supply {
+      width: 100%;
+      @extend %flex_line;
+      .ot_supply1 {
+        @extend %flex_column;
+        position: relative;
+        width: 33%;
+        .ot_photo_logo {
+          position: relative;
+          .logo {
+            position: absolute;
+            top: -46px;
+            left: -46px;
+          }
+          .photo {                       
+            width: 100%;
+          }
+        }
+        .ot_supply2 {
+          position: absolute;
+          left: 15%;
+          top: 80%;
+          background-color: #FFFFFF;
+          width: 70%;
+          .name{
+            font-family: 'YesevaOne-Regular';
+            font-size: 18px;
+            line-height: 25px;
+            color: $black; 
+            text-align: center;                     
+          }
+          .position {                    
+            font-family: FuturaBookC;
+            font-size: 18px;
+            line-height: 26px;
+            color: #959595;                    
+            text-align: center;                       
+          }
+          .work_experience {
+            display: flex;
+            position: relative;
+            @extend %orange_button;                     
+            height: 54px;
+            width: 100%;                
+            p {
+              position: absolute;
+              top: 50%;                     
+              transform: translate(0, -50%);
+              @extend %orange_button;
+              left: 15%;
+            }                                              
+          }
+        }
+      } 
+    }
+    .ot_text2 {
+      width: 40%;
+      font-family: 'FuturaBookC';
+      font-size: 20px;
+      line-height: 34px;
+      text-align: center;
+      color:white;
+      margin:  200px auto 100px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 551px) {
+  .design_project .container .design_supply {
+    .design_supply1:last-child {
+      display: none;
+    }
+    .design_supply1 {
+      width: 45%;
+    }
+  }
+  .our_team {
+    .container {
+      .ot_supply{
+        .ot_supply1:last-child {
+          display: none;
+        }
+        .ot_supply1 {
+          width: 45%;
+          .ot_supply2 {
+            width: 70%;
+            left: 15%;
+          }
+        }
+      }  
+      .ot_text2{
+        width: 80%;
+        margin: 127px auto;
+      } 
+    }
+  } 
+}
+
+@media screen and (max-width: 550px) {
+  .design_project {
+    background-color: $black;
+    .container {
+      padding-bottom: 0;
+      width: 90%;
+      margin: 0 auto; 
+      @include flex_column();     
+      .design_title {
+        padding-top: 0px;
+        padding-bottom: 60px;
+        font-size: 23px;
+        color: white;
+      }
+      .design_text {
+        display: none;
+      }
+      .design_supply {
+        @include flex_column();     
+        width: 100%;
+        
+        .design_supply1 {
+          @extend %flex_column;
+          position: relative;
+          width: 100%;
+          align-items: end;
+          max-width: 392px;
+          img {
+            max-width: 100%;
+          }
+          .design_supply2 {
+            position: relative;
+            left: 0%;
+            top: -133px;
+            width: 70%;  
+          }
+        } 
+      }
+    }
+  }
+  .our_team {
+    height: auto;
+    background-color: white;
+    color: black;
+    .container {       
+      .ot_title {
+        text-align : center;
+        color: black;
+      }
+      .ot_text {
+        width: 100%;
+        margin: 50px auto 60px;
+        color: black;
+      }
+      .ot_supply {
+        width: 100%;
+        @include flex_column();     
+        .ot_supply1 {
+          @extend %flex_column;
+          position: relative;
+          width: 100%;
+          .ot_photo_logo {
+            position: relative;
+            .photo {
+              max-width: 100%;
+            }
+          }
+          .ot_supply2 {
+            position: relative;
+            left: 0%;
+            top: -67px;  
+          }
+        } 
+      }
+      .ot_text2 {
+        display: none;
+      }
+    }
+  }    
+}

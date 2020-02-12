@@ -1,0 +1,298 @@
+.types_repair {
+  background-color: #FFFFFF;
+  margin-top: -23px;
+  .container {
+    height: 100%;
+    padding-bottom: 225px;
+    .tr_title {
+      padding: 45px 0;
+      text-align : center;
+      font-family: 'YesevaOne-Regular';
+      font-size: 20px;
+      line-height: 28px;
+      text-transform: uppercase;
+      color: black;
+    }
+    .tr_supply {
+      width: 100%;
+      @extend %flex_line;
+      .tr_supply1 {
+        @extend %flex_column;
+        position: relative;
+        width: 33%;
+        img {
+          max-width: 100%;
+        }
+        .tr_supply2 {
+          position: absolute;
+          left: 13%;
+          top: 60%;
+          width: 76%;
+          p {
+            font-family: 'YesevaOne-Regular';
+            font-size: 18px;
+            line-height: 25px;
+            color: $black; 
+            background-color: #FFFFFF;
+            margin-bottom: 0;
+            padding: 15px 0 0 26px;
+          }
+          ul {
+            padding-left: 10px;
+            background-color: #FFFFFF;
+            font-family: FuturaBookC;
+            font-size: 15px;
+            line-height: 25px;
+            color: #959595;
+          }
+          .submit {
+            @extend %orange_button;
+            margin-top: 30px;
+            height: 54px;
+            width: 50%;
+          }
+        }
+      } 
+    }
+  }
+}
+
+.stages_form {
+  background-color: white;
+  .container {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .form {
+      background-color: $black;
+      width: 60%;
+      height: 500px;
+      @extend %flex_column;
+      color: white;
+      margin: 5%;
+      .title {
+        font-family: 'FuturaDemiCRegular';
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;      
+      }
+      p {
+        font-family: 'FuturaBookC';
+        font-size: 15px;
+        line-height: 20px; 
+      }
+      input{
+        font-family: 'FuturaMediumC';
+        font-size: 18px;
+        line-height: 25px;
+        border:none;
+        background-color:transparent;
+        box-shadow: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);;
+        color: white;
+      }
+      .agree {
+        display: flex;
+        input {
+          margin:auto 0;
+          color:$orange;
+        }
+        p {
+          font-family: 'FuturaBookC';
+          font-size: 16px;
+          line-height: 22px; 
+          margin-left: 10px;         
+        }
+      }
+      .submit {
+        @extend %orange_button;
+        height: 51px;
+        width: 28%;
+        margin-bottom: 20px;
+      }
+    }
+    .pig {
+      display: flex;
+      margin-bottom: 7%;
+      p {
+        font-family: 'FuturaDemiCRegular';
+        font-size: 20px;
+        line-height: 25px;
+        color: $orange;
+      }
+    }
+  }
+}
+
+.fantazies {
+  position: relative;
+  .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(../assets/fantazies/imageback.png);
+    background-size: cover;
+    opacity: 0.15;
+    left: 0;
+    top: 0;
+  }
+  .container {
+    height: 100%;
+    @extend %flex_line;
+    .realize_text {
+      width: 35%;
+      .f_title {
+        font-family: 'YesevaOne-Regular';
+        font-size: 27px;
+        line-height: 37px;
+        text-transform: uppercase;
+        color: $orange;
+        width: 80%;
+      }
+      ul {
+        li {
+          font-family: 'Proxima Nova';
+          font-size: 20px;
+          line-height: 50px;
+          color: #FFFFFF;
+        }
+      }
+    }
+    .photo1 {
+      width: 27%;
+      img {
+        padding: 20px 0;
+        width: 100%;
+      }
+    }
+    .photo2 {
+      width: 27%;
+      padding-bottom: 170px;
+      img {
+        padding: 20px 0;
+        width: 100%;
+      }
+    }
+    .carousel_images {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .types_repair {
+    padding-bottom:0;
+    height: auto;
+    margin-top:0;
+    .container {
+      @include flex_column();
+      padding-bottom: 0;
+      .tr_supply {
+        width: 100%;
+        @include flex_column();
+        justify-content: space-between;
+        .tr_supply1 {
+          @include flex_column();
+          margin-bottom: 223px;
+          width: 400px;
+          img {
+            display: block;  
+          }
+          .tr_supply2 {
+            position: absolute;
+            left: 14%;
+            top: 61%;
+            width: 77%;
+            .submit {
+              margin-top: 0px;
+            }
+          }
+        } 
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) and(min-width: 551px) {
+  .stages_form .container {
+    .design_stages1, .design_stages2, .design_stages3, .design_stages4 {
+      display: none;
+    }
+    .form {
+      width: 80%;
+      right: 10%;
+    }
+    .pig {
+      bottom: 201px;
+      right: 27%;
+      width: 57%;
+    }
+  }
+  .fantazies .container {
+    .photo2 {
+      display: none;
+    }
+    .realize_text {
+      width: 50%;
+    }
+    .photo1 {
+      width: 45%;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .types_repair .container .tr_supply .tr_supply1 {
+    width: 100%;
+  }
+  .stages_form { 
+    display: none;
+  }
+  .fantazies {  
+    .back {
+        display: none;
+    }
+    .container {
+      width: 90%;
+      @include flex_column();
+      .realize_text {
+        @include flex_line();
+        justify-content: center;
+        width: 100%;
+        .f_title {
+          width: 280px;
+          text-align: center;
+          font-size: 22px;
+          line-height: 30px;
+          padding: 50px 0;
+        }
+        ul {
+          display: none;
+        }
+      }
+      .photo1 {
+        display: none;
+      }
+      .photo2 {
+        display: none;
+      }
+      .carousel_images {
+        display: block;
+        overflow: hidden;
+        margin-bottom: 50px;
+        ul {
+          display: flex;
+          li {
+            width: 100%;
+            flex: 1 0 100%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

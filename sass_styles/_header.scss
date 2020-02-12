@@ -1,0 +1,79 @@
+header, footer {
+  background-color: $black;
+  font-family: 'FuturaDemiCRegular';
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  
+  .container {
+    @extend %flex_line;  
+    height: 83px;
+  }
+}
+
+.company_name {
+  color: $orange;
+}
+
+.header_navigation {
+  width: 50%;
+  ul {
+    @extend %flex_line;  
+  }   
+}
+
+.header_contacts {
+  .phone {
+    color: $orange;
+  }
+  .request_call {
+    @extend %orange_button;
+    text-transform: uppercase;
+    margin-left: 20px;
+  }
+}
+
+
+@media screen and (max-width:920px) {
+  .wrapper header .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header_contacts {   
+    display: none;
+    font-size: 13px; 
+  }
+  .header_navigation {
+    width: 90%;
+    padding-right: 10px;
+    font-size: 13px;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  header {
+    max-width: 550px;
+    .container {
+    height: 57px;
+    }
+  }
+
+  .header_navigation {
+    display: none; 
+  }
+  
+  .header_contacts {   
+    .request_call {
+      display: none; 
+    }
+    .phone {
+      color:white;
+    }
+  }
+  footer {
+    display: none;
+  }
+}

@@ -1,0 +1,236 @@
+.our_clients {
+  background-color: white;
+  .container {
+    padding: 0 20px 300px 20px;
+    .hidden {
+      display: white;
+    }       
+    .oc_title {
+      padding-top: 20px;
+      text-align : center;
+      font-family: 'YesevaOne-Regular';
+      font-size: 20px;
+      line-height: 28px;
+      text-transform: uppercase;
+      color: $black;
+    }
+    .oc_text {
+      width: 30%;
+      font-family: 'FuturaBookC';
+      font-size: 20px;
+      line-height: 27px;
+      text-align: center;
+      color: $black;
+      margin: 0 auto 60px;
+    }
+    .oc_supply {
+      width: 100%;
+      @extend %flex_line;
+      .oc_supply1 {
+        @extend %flex_column;
+        position: relative;
+        width: 30%;
+        background-color: whitesmoke;
+          .photo_name {
+          margin-top: 20px;
+          @extend %flex_line;
+          justify-content: flex-start;
+          width: 90%;
+          .name{
+            width: 60%;
+            font-family: 'YesevaOne-Regular';
+            font-size: 18px;
+            line-height: 25px;
+            color: $black; 
+            text-align: center;                  
+          }
+        }
+        .review {
+          position: relative;
+          font-family: FuturaBookC;
+          font-size: 18px;
+          line-height: 26px;
+          color: #959595;                                                        
+        }               
+        .Volumes_terms {
+          position: absolute;
+          display: flex;
+          left: 0%;
+          bottom: -39px;
+          @extend %orange_button;                     
+          height: 54px;
+            width: 60%;                
+          p {
+            position: absolute;
+            top: 50%;                     
+            transform: translate(0, -50%);
+            @extend %orange_button;
+          }
+          .oc_block {
+            position: relative;
+            width: 25%;
+            @extend %flex_line;
+          }                       
+        }               
+      } 
+    }     
+  }
+}
+
+.form_map {
+  @extend %flex_line;
+  background-color: $black;
+  .container {
+    @extend %flex_column;
+    margin-top: -193px;   
+    .form {
+      @extend %flex_column;
+      width: 60%;
+      background-color: black;
+      color: #FFFFFF;
+      .form_title {
+        text-align : center;
+        font-family: 'YesevaOne-Regular';
+        font-size: 20px;
+        line-height: 28px;
+        text-transform: uppercase;              
+      }
+      p {
+        font-family: 'FuturaBookC';
+        font-size: 15px;
+        line-height: 20px;               
+      }
+      input{
+        font-family: 'FuturaMediumC';
+        font-size: 18px;
+        line-height: 25px;
+        border:none;
+        background-color:transparent;
+        box-shadow: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);;
+        color: white;
+      }
+      .agree {
+        display: flex;
+        input {
+          margin:auto 0;
+          color:$orange;
+        }
+        p {
+          font-family: 'FuturaBookC';
+          font-size: 16px;
+          line-height: 22px; 
+          margin-left: 10px;         
+        }
+      }
+      .submit {
+        @extend %orange_button;
+        height: 51px;
+        width: 28%;
+        margin-bottom: 20px;
+      }
+      .name_phone {
+        @extend %flex_line;
+        .fm_name, .fm_phone {
+          margin: 0 20px;
+        }
+      }
+      .fm_question {
+        width: 72%;
+        input {
+          width: 100%;
+        }
+      }
+    }
+    .fm_text {
+      text-align : center;
+      font-family: 'YesevaOne-Regular';
+      font-size: 20px;
+      line-height: 28px;
+      text-transform: uppercase;
+      color: $orange;
+      width: 57%;
+      margin: 15px 0;
+    }
+    .map {
+      margin: 30px 0 0 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 551px) {
+  .our_clients .container {
+    .oc_supply{
+      .oc_supply1:last-child {
+        display: none;
+      }
+      .oc_supply1 {
+        width: 48%;
+      }
+    }  
+    .oc_text {
+      width: 80%;
+      margin-bottom: 20px;
+    }  
+  }
+  .form_map .container {
+    .form {
+      width: 470px;
+      .name_phone {
+        width: 100%;
+      }
+    }
+  }
+}    
+
+@media screen and (max-width: 550px) {
+  .our_clients {
+    display: none;
+  }
+  .form_map {
+    @extend %flex_line;
+    height: auto;
+    .container {
+      @extend %flex_column;
+      margin-top: 0px;   
+      .form {
+        @extend %flex_column;
+        width: 100%;
+        background-color: $black;
+        .submit { 
+          width: 100%; 
+        }
+        .name_phone {
+          @include flex_column();  
+          width: 100%;
+          .fm_name, .fm_phone {
+            width: 100%;
+            input {
+              width: 100%;
+            }
+          }
+        }
+        .fm_question {
+          width: 100%;
+          input {
+            width: 100%;
+          }
+        }
+      }
+      .fm_text {
+        width: 100%;
+        margin: 15px 0;
+      }
+      .map {
+        max-width: 100%;
+        margin: 30px 0 0 0;
+        img {
+          max-width: 100%;
+        }
+      }
+    }  
+  }
+}

@@ -1,0 +1,80 @@
+.header_navigation ul, header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_contacts .request_call {
+  background-color: #E3B873;
+  color: white;
+  border-radius: 2px;
+}
+
+@font-face {
+  font-family: "FuturaDemiCRegular";
+  src: url("../assets/fonts/FuturaDemiCRegular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #131313;
+  font-family: "FuturaDemiCRegular";
+  color: blue;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+header .container {
+  height: 83px;
+}
+
+.company_name {
+  color: #E3B873;
+}
+
+.header_navigation {
+  width: 50%;
+}
+.header_contacts .phone {
+  color: #E3B873;
+}
+.header_contacts .request_call {
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.instagram {
+  font-family: "FuturaDemiCRegular";
+  color: #E3B873;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.instagram .instagram_line {
+  width: 200px;
+}
+
+main {
+  background-color: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,120 @@
+$margin: 0 auto;
+$black: rgba(19, 19, 19, 1);
+$orange: #E3B873;
+
+%flex_line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%flex_column {
+  @extend %flex_line;
+  flex-direction: column;
+}
+
+%orange_button {
+  all: unset;
+  background-color: $orange;
+  color: white;
+  border-radius: 2px;
+  text-align: center;
+  font-family: 'FuturaDemiCRegular';
+  font-size: 14px;
+  cursor: pointer;
+}
+
+%opacity_button {
+  all: unset;
+  background-color: none;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2px;
+  text-align: center;
+  font-family: 'FuturaDemiCRegular';
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@mixin flex_line () {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex_column () {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+@font-face {
+  font-family: 'FuturaDemiCRegular';
+  src: url('../assets/fonts/FuturaDemiCRegular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaMediumC';
+  src: url('../assets/fonts/futuramediumc.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YesevaOne-Regular';
+  src: url('../assets/fonts/YesevaOne-Regular_v2.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaBookC';
+  src: url('../assets/fonts/Futurabookc.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../assets/fonts/Proxima Nova.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;  
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: $margin;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 1280px;
+  margin: $margin;
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    padding:0;
+  }
+}
